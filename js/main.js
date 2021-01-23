@@ -24,7 +24,7 @@ function masterHeroReveal() {
 
 // Loading Screen
 function loadingScreenReveal() {
-//	const loadingScreen = select(".loading-screen");
+const loadingScreen = select(".loading-screen");
 //	const siStudio = select("#load-si-studio");
 //	const copyright = select("#load-copyright");
 	const textRotator = selectAll(".text-rotater");
@@ -48,7 +48,7 @@ function loadingScreenReveal() {
 //	const copyrightSplit = new SplitText(copyright);
 
 	gsap.set(textRotator, { display: "flex" });
-//	gsap.set(loadingScreen, { display: "flex", autoAlpha: 1 });
+	gsap.set(loadingScreen, { display: "flex", autoAlpha: 1 });
 	gsap.set([skill1Split.chars, skill2Split.chars, skill3Split.chars, skill4Split.chars, skill5Split.chars, skill6Split.chars], {
 		transformOrigin: "50% 50% -34",
 	});
@@ -74,7 +74,7 @@ function loadingScreenReveal() {
 //	tl.to(siStudioSplit.chars, { y: -34, stagger: 0.02 }, "<");
 //	tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
 //	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
-//	tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
+	tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
 
 	return tl;
 }
