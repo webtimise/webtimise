@@ -26,7 +26,7 @@ function masterHeroReveal() {
 function loadingScreenReveal() {
 const loadingScreen = select(".loading-screen");
 	const wtm = select("#load-wtm");
-//	const copyright = select("#load-copyright");
+	const copyright = select("#load-copyright");
 	const textRotator = selectAll(".text-rotater");
 //	const bgRevealer = selectAll(".revealer");
 
@@ -45,7 +45,7 @@ const loadingScreen = select(".loading-screen");
 	const skill6Split = new SplitText(skill6);
 
 	const wtmSplit = new SplitText(wtm);
-//	const copyrightSplit = new SplitText(copyright);
+	const copyrightSplit = new SplitText(copyright);
 
 	gsap.set(textRotator, { display: "flex" });
 	gsap.set(loadingScreen, { display: "flex", autoAlpha: 1 });
@@ -56,7 +56,7 @@ const loadingScreen = select(".loading-screen");
 	const tl = gsap.timeline({ defaults: { duration: 1.34, ease: "myEaseSmooth" } });
 
 	tl.from(wtmSplit.chars, { y: 34, stagger: 0.03 }, "<");
-//	tl.from(copyrightSplit.chars, { y: 34, stagger: 0.02 }, "<.1");
+	tl.from(copyrightSplit.chars, { y: 34, stagger: 0.02 }, "<.1");
 
 	tl.from(skill1Split.chars, { rotationX: -90, opacity: 0, duration: 0.89, stagger: 0.02 }, "<");
 	tl.to(skill1Split.chars, { rotationX: 90, opacity: 0, duration: 0.89, stagger: 0.02 }, "<1");
@@ -72,7 +72,7 @@ const loadingScreen = select(".loading-screen");
 	tl.to(skill6Split.chars, { rotationX: 90, opacity: 0, duration: 0.89, stagger: 0.02 }, "<1");
 
 	tl.to(wtmSplit.chars, { y: -34, stagger: 0.02 }, "<");
-//	tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
+	tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
 //	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
 	tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
 
