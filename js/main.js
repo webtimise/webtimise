@@ -12,12 +12,12 @@ function init() {
 // Master Timeline
 function masterHeroReveal() {
 	const loader = loadingScreenReveal();
-	const hero = heroReveal();
+//	const hero = heroReveal();
 
 	const masterTl = gsap.timeline();
 
 	masterTl.add(loader);
-	masterTl.add(hero, "<6");
+//	masterTl.add(hero, "<6");
 
 	return masterTl;
 }
