@@ -25,7 +25,7 @@ function masterHeroReveal() {
 // Loading Screen
 function loadingScreenReveal() {
 const loadingScreen = select(".loading-screen");
-//	const siStudio = select("#load-si-studio");
+	const wtm = select("#load-wtm");
 //	const copyright = select("#load-copyright");
 	const textRotator = selectAll(".text-rotater");
 //	const bgRevealer = selectAll(".revealer");
@@ -44,7 +44,7 @@ const loadingScreen = select(".loading-screen");
 	const skill5Split = new SplitText(skill5);
 	const skill6Split = new SplitText(skill6);
 
-//	const siStudioSplit = new SplitText(siStudio);
+	const wtmSplit = new SplitText(wtm);
 //	const copyrightSplit = new SplitText(copyright);
 
 	gsap.set(textRotator, { display: "flex" });
@@ -55,7 +55,7 @@ const loadingScreen = select(".loading-screen");
 
 	const tl = gsap.timeline({ defaults: { duration: 1.34, ease: "myEaseSmooth" } });
 
-//	tl.from(siStudioSplit.chars, { y: 34, stagger: 0.03 }, "<");
+	tl.from(wtmSplit.chars, { y: 34, stagger: 0.03 }, "<");
 //	tl.from(copyrightSplit.chars, { y: 34, stagger: 0.02 }, "<.1");
 
 	tl.from(skill1Split.chars, { rotationX: -90, opacity: 0, duration: 0.89, stagger: 0.02 }, "<");
@@ -71,7 +71,7 @@ const loadingScreen = select(".loading-screen");
 	tl.from(skill6Split.chars, { rotationX: -90, opacity: 0, duration: 0.89, stagger: 0.02 }, "<");
 	tl.to(skill6Split.chars, { rotationX: 90, opacity: 0, duration: 0.89, stagger: 0.02 }, "<1");
 
-//	tl.to(siStudioSplit.chars, { y: -34, stagger: 0.02 }, "<");
+	tl.to(wtmSplit.chars, { y: -34, stagger: 0.02 }, "<");
 //	tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
 //	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
 	tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
