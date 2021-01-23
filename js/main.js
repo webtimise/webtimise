@@ -24,11 +24,11 @@ function masterHeroReveal() {
 
 // Loading Screen
 function loadingScreenReveal() {
-	const loadingScreen = select(".loading-screen");
-	const siStudio = select("#load-si-studio");
-	const copyright = select("#load-copyright");
+//	const loadingScreen = select(".loading-screen");
+//	const siStudio = select("#load-si-studio");
+//	const copyright = select("#load-copyright");
 	const textRotator = selectAll(".text-rotater");
-	const bgRevealer = selectAll(".revealer");
+//	const bgRevealer = selectAll(".revealer");
 
 	const skill1 = select("#skill-1");
 	const skill2 = select("#skill-2");
@@ -44,19 +44,19 @@ function loadingScreenReveal() {
 	const skill5Split = new SplitText(skill5);
 	const skill6Split = new SplitText(skill6);
 
-	const siStudioSplit = new SplitText(siStudio);
-	const copyrightSplit = new SplitText(copyright);
+//	const siStudioSplit = new SplitText(siStudio);
+//	const copyrightSplit = new SplitText(copyright);
 
 	gsap.set(textRotator, { display: "flex" });
-	gsap.set(loadingScreen, { display: "flex", autoAlpha: 1 });
+//	gsap.set(loadingScreen, { display: "flex", autoAlpha: 1 });
 	gsap.set([skill1Split.chars, skill2Split.chars, skill3Split.chars, skill4Split.chars, skill5Split.chars, skill6Split.chars], {
 		transformOrigin: "50% 50% -34",
 	});
 
 	const tl = gsap.timeline({ defaults: { duration: 1.34, ease: "myEaseSmooth" } });
 
-	tl.from(siStudioSplit.chars, { y: 34, stagger: 0.03 }, "<");
-	tl.from(copyrightSplit.chars, { y: 34, stagger: 0.02 }, "<.1");
+//	tl.from(siStudioSplit.chars, { y: 34, stagger: 0.03 }, "<");
+//	tl.from(copyrightSplit.chars, { y: 34, stagger: 0.02 }, "<.1");
 
 	tl.from(skill1Split.chars, { rotationX: -90, opacity: 0, duration: 0.89, stagger: 0.02 }, "<");
 	tl.to(skill1Split.chars, { rotationX: 90, opacity: 0, duration: 0.89, stagger: 0.02 }, "<1");
@@ -71,10 +71,10 @@ function loadingScreenReveal() {
 	tl.from(skill6Split.chars, { rotationX: -90, opacity: 0, duration: 0.89, stagger: 0.02 }, "<");
 	tl.to(skill6Split.chars, { rotationX: 90, opacity: 0, duration: 0.89, stagger: 0.02 }, "<1");
 
-	tl.to(siStudioSplit.chars, { y: -34, stagger: 0.02 }, "<");
-	tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
-	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
-	tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
+//	tl.to(siStudioSplit.chars, { y: -34, stagger: 0.02 }, "<");
+//	tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
+//	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
+//	tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
 
 	return tl;
 }
