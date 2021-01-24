@@ -67,7 +67,7 @@ function loadingScreenReveal() {
 
 	gsap.set(textRotator, { display: "flex" });
 	gsap.set(loadingScreen, { display: "flex", autoAlpha: 1 });
-	gsap.set([skill1Split.chars, skill2Split.chars, skill3Split.chars, skill4Split.chars, skill5Split.chars, skill6Split.chars], {
+	gsap.set([skill1Split.chars, skill2Split.chars, skill3Split.chars, skill4Split.chars, skill5Split.chars], {
 		transformOrigin: "50% 50% -34",
 	});
 
