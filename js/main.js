@@ -93,8 +93,8 @@ function loadingScreenReveal() {
 	tl.to(wtmSplit.chars, { y: -34, stagger: 0.02 }, "<");
     tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
     
-    tl.to(path, 0.8, {attr: { d: start }}, "<.1");
-    tl.to(path, {attr: { d: end }});
+    tl.to(path, 0.8, {attr: { d: start }}, "0");
+    tl.to(path, 0.4, {attr: { d: end }});
 
     tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
 //	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
