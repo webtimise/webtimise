@@ -62,7 +62,6 @@ function loadingScreenReveal() {
 	const skill3Split = new SplitText(skill3);
 	const skill4Split = new SplitText(skill4);
 	const skill5Split = new SplitText(skill5);
-	const skill6Split = new SplitText(skill6);
 
 	const wtmSplit = new SplitText(wtm);
 	const copyrightSplit = new SplitText(copyright);
@@ -88,8 +87,6 @@ function loadingScreenReveal() {
 	tl.to(skill4Split.chars, { rotationX: 90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<1");
 	tl.from(skill5Split.chars, { rotationX: -90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<");
 	tl.to(skill5Split.chars, { rotationX: 90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<1");
-	tl.from(skill6Split.chars, { rotationX: -90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<");
-	tl.to(skill6Split.chars, { rotationX: 90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<1");
 
 	tl.to(wtmSplit.chars, { y: -34, stagger: 0.02 }, "<");
     tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
