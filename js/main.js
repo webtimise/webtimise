@@ -89,7 +89,7 @@ function loadingScreenReveal() {
 	tl.to(wtmSplit.chars, { y: -34, stagger: 0.02 }, "<");
 	tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
 //	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
-	tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<");
+//	tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<");
 
 	return tl;
 }
