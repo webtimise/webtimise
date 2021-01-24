@@ -55,7 +55,6 @@ function loadingScreenReveal() {
 	const skill3 = select("#skill-3");
 	const skill4 = select("#skill-4");
 	const skill5 = select("#skill-5");
-	const skill6 = select("#skill-6");
 
 	const skill1Split = new SplitText(skill1);
 	const skill2Split = new SplitText(skill2);
