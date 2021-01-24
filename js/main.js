@@ -23,8 +23,8 @@ function masterHeroReveal() {
 }
 
 // Loading Screen
-function loadingScreenReveal() {
-const loadingScreen = select(".loading-screen");
+function loadingScreenReveal() {    
+    const loadingScreen = select(".loading-screen");
 	const wtm = select("#load-wtm");
 	const copyright = select("#load-copyright");
 	const textRotator = selectAll(".text-rotater");
@@ -75,6 +75,19 @@ const loadingScreen = select(".loading-screen");
 	tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
 //	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
 	tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
+
+    let $path = document.querySelector(".path"),
+        repeat = true,
+        animate = () => {
+          const start = "M 0 100 V 50 Q 50 0 100 50 V 100 z";
+          const end =   "M 0 100 V 0 Q 50 0 100 0 V 100 z";
+          new TimelineMax(repeat ? { paused: true } : {repeat: -1, repeatDelay: 1})
+            .to($path, 0.8, {attr: { d: start }, ease: Power2.easeIn})
+            .to($path, 0.4, {attr: { d: end }, ease: Power2.easeOut})
+            .play(0);
+        };
+    
+    animate();
 
 	return tl;
 }
