@@ -12,16 +12,32 @@ function init() {
 // Master Timeline
 function masterHeroReveal() {
     const loader = loadingScreenReveal();
-    animate();
-
+    const opener = transitionScreenReveal();
 //	const hero = heroReveal();
 
 	const masterTl = gsap.timeline();
 
 	masterTl.add(loader);
+	masterTl.add(opener);
 //	masterTl.add(hero, "<6");
 
 	return masterTl;
+}
+
+// Transition Screen
+function transitionScreenReveal() {
+    let $path = document.querySelector(".path"),
+        repeat = true,
+        animate = () => {
+          const start = "M 0 100 V 50 Q 50 0 100 50 V 100 z";
+          const end =   "M 0 100 V 0 Q 50 0 100 0 V 100 z";
+          new TimelineMax(repeat ? { paused: true } : {repeat: -1, repeatDelay: 1})
+            .to($path, 0.8, {attr: { d: start }, ease: Power2.easeIn})
+            .to($path, 0.4, {attr: { d: end }, ease: Power2.easeOut})
+            .play(0);
+        };
+    
+    animate();
 }
 
 // Loading Screen
@@ -78,17 +94,6 @@ function loadingScreenReveal() {
 //	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
 	tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
 
-    let $path = document.querySelector(".path"),
-        repeat = true,
-        animate = () => {
-          const start = "M 0 100 V 50 Q 50 0 100 50 V 100 z";
-          const end =   "M 0 100 V 0 Q 50 0 100 0 V 100 z";
-          new TimelineMax(repeat ? { paused: true } : {repeat: -1, repeatDelay: 1})
-            .to($path, 0.8, {attr: { d: start }, ease: Power2.easeIn})
-            .to($path, 0.4, {attr: { d: end }, ease: Power2.easeOut})
-            .play(0);
-        };
-    
 	return tl;
 }
 
