@@ -93,7 +93,7 @@ function loadingScreenReveal() {
 	tl.to(wtmSplit.chars, { y: -34, stagger: 0.02 }, "<");
     tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
     
-    tl.to(path, {attr: { d: start }, duration: 0.8, ease: Power2.easeIn, stagger: 0.01}, "0");
+    tl.to(path, {attr: { d: start }, duration: 0.8, ease: Power2.easeIn});
     tl.to(path, {attr: { d: end }, duration: 0.4, ease: Power2.easeOut});
 
     tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
