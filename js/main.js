@@ -11,7 +11,9 @@ function init() {
 
 // Master Timeline
 function masterHeroReveal() {
-	const loader = loadingScreenReveal();
+    const loader = loadingScreenReveal();
+    animate();
+
 //	const hero = heroReveal();
 
 	const masterTl = gsap.timeline();
@@ -87,8 +89,6 @@ function loadingScreenReveal() {
             .play(0);
         };
     
-    animate();
-
 	return tl;
 }
 
