@@ -78,7 +78,7 @@ function loadingScreenReveal() {
 	tl.from(wtmSplit.chars, { y: 34, stagger: 0.03 }, "<");
 	tl.from(copyrightSplit.chars, { y: 34, stagger: 0.02 }, "<.1");
 
-	tl.from(skill1Split.chars, { rotationX: -90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<");
+	tl.from(skill1Split.chars, { rotationX: -90, opacity: 0, duration: 1.99, stagger: 0.02 }, "<");
 	tl.to(skill1Split.chars, { rotationX: 90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<1");
 	tl.from(skill2Split.chars, { rotationX: -90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<");
 	tl.to(skill2Split.chars, { rotationX: 90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<1");
