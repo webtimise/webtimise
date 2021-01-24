@@ -96,7 +96,7 @@ function loadingScreenReveal() {
 //	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
 
     tl.to(path, 0.8, {attr: { d: start }, ease: Power2.easeIn}, "<.5");
-    tl.to(path, 0.4, {attr: { d: end }, ease: Power2.easeOut};
+    tl.to(path, 0.4, {attr: { d: end }, ease: Power2.easeOut});
 
 //    tl.play(0);
 /*        
