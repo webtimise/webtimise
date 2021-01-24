@@ -18,7 +18,7 @@ function masterHeroReveal() {
 	const masterTl = gsap.timeline();
 
 	masterTl.add(loader);
-	masterTl.add(opener, "<6");
+	masterTl.add(opener, "<5");
 //	masterTl.add(hero, "<6");
 
 	return masterTl;
