@@ -94,8 +94,8 @@ function loadingScreenReveal() {
 	tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
 //	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
 
-    tl.to(path, 0.8, {attr: { d: start }, ease: Power2.easeIn}, "<.8");
-    tl.to(path, 0.4, {attr: { d: end }, ease: Power2.easeOut}, "<.4");
+    tl.to(path, 0.8, {attr: { d: start }, ease: Power2.easeIn});
+    tl.to(path, 0.4, {attr: { d: end }, ease: Power2.easeOut}, "<1");
 
     tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
 //    tl.play(0);
