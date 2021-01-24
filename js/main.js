@@ -93,25 +93,8 @@ function loadingScreenReveal() {
 
 	tl.to(wtmSplit.chars, { y: -34, stagger: 0.02 }, "<");
     tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
-/*    
-    tl.to(path, {attr: { d: start }, duration: 0.8, ease: Power2.easeIn});
-    tl.to(path, {attr: { d: end }, duration: 0.4, ease: Power2.easeOut});
-*/
-//    tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
-
+    tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
     //	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
-
-    /*
-    tl.to(path, 0.8, {attr: { d: start }, ease: Power2.easeIn}, "<.5");
-    tl.to(path, 0.4, {attr: { d: end }, ease: Power2.easeOut});
-    */
-//    tl.play(0);
-/*        
-    const tl_Transition = gsap.timeline();
-        tl_Transition.to($path, 0.8, {attr: { d: start }, ease: Power2.easeIn});
-        tl_Transition.to($path, 0.4, {attr: { d: end }, ease: Power2.easeOut});
-        tl_Transition.play(0);
-*/
 
 	return tl;
 }
