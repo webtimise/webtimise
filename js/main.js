@@ -45,7 +45,7 @@ function loadingScreenReveal() {
 	const textRotator = selectAll(".text-rotater");
 //	const bgRevealer = selectAll(".revealer");
 
-    const $path = select(".path");
+    const path = select(".path");
     const start = "M 0 100 V 50 Q 50 0 100 50 V 100 z";
     const end =   "M 0 100 V 0 Q 50 0 100 0 V 100 z";
 
@@ -95,10 +95,15 @@ function loadingScreenReveal() {
 //	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
 	tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
 
+    tl.to(path, 0.8, {attr: { d: start }, ease: Power2.easeIn});
+    tl.to(path, 0.4, {attr: { d: end }, ease: Power2.easeOut});
+//    tl.play(0);
+/*        
     const tl_Transition = gsap.timeline();
         tl_Transition.to($path, 0.8, {attr: { d: start }, ease: Power2.easeIn});
         tl_Transition.to($path, 0.4, {attr: { d: end }, ease: Power2.easeOut});
         tl_Transition.play(0);
+*/
 
 	return tl;
 }
