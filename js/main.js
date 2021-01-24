@@ -91,12 +91,14 @@ function loadingScreenReveal() {
 	tl.to(skill6Split.chars, { rotationX: 90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<1");
 
 	tl.to(wtmSplit.chars, { y: -34, stagger: 0.02 }, "<");
-	tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
+    tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
+    
+    tl.to(path, 0.8, {attr: { d: start }, stagger: 0.01}, "<.1");
+    tl.to(path, 0.4, {attr: { d: end }});
+
     tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
 //	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
 
-    tl.to(path, 0.8, {attr: { d: start }, stagger: 0.01});
-    tl.to(path, 0.4, {attr: { d: end }});
     /*
     tl.to(path, 0.8, {attr: { d: start }, ease: Power2.easeIn}, "<.5");
     tl.to(path, 0.4, {attr: { d: end }, ease: Power2.easeOut});
