@@ -80,15 +80,15 @@ function loadingScreenReveal() {
 
 	tl.from(skill1Split.chars, { rotationX: -90, opacity: 0, duration: 1.99, stagger: 0.02 }, "<");
 	tl.to(skill1Split.chars, { rotationX: 90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<1");
-	tl.from(skill2Split.chars, { rotationX: -90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<");
+	tl.from(skill2Split.chars, { rotationX: -90, opacity: 0, duration: 1.99, stagger: 0.02 }, "<");
 	tl.to(skill2Split.chars, { rotationX: 90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<1");
-	tl.from(skill3Split.chars, { rotationX: -90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<");
+	tl.from(skill3Split.chars, { rotationX: -90, opacity: 0, duration: 1.99, stagger: 0.02 }, "<");
 	tl.to(skill3Split.chars, { rotationX: 90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<1");
-	tl.from(skill4Split.chars, { rotationX: -90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<");
+	tl.from(skill4Split.chars, { rotationX: -90, opacity: 0, duration: 1.99, stagger: 0.02 }, "<");
 	tl.to(skill4Split.chars, { rotationX: 90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<1");
-	tl.from(skill5Split.chars, { rotationX: -90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<");
+	tl.from(skill5Split.chars, { rotationX: -90, opacity: 0, duration: 1.99, stagger: 0.02 }, "<");
 	tl.to(skill5Split.chars, { rotationX: 90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<1");
-	tl.from(skill6Split.chars, { rotationX: -90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<");
+	tl.from(skill6Split.chars, { rotationX: -90, opacity: 0, duration: 1.99, stagger: 0.02 }, "<");
 	tl.to(skill6Split.chars, { rotationX: 90, opacity: 0, duration: 0.99, stagger: 0.02 }, "<1");
 
 	tl.to(wtmSplit.chars, { y: -34, stagger: 0.02 }, "<");
