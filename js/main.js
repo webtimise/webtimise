@@ -12,13 +12,13 @@ function init() {
 // Master Timeline
 function masterHeroReveal() {
     const loader = loadingScreenReveal();
-    const opener = transitionScreenReveal();
+//  const opener = transitionScreenReveal();
 //	const hero = heroReveal();
 
 	const masterTl = gsap.timeline();
 
 	masterTl.add(loader);
-	masterTl.add(opener);
+//	masterTl.add(opener);
 //	masterTl.add(hero, "<6");
 
 	return masterTl;
@@ -44,6 +44,10 @@ function loadingScreenReveal() {
 	const copyright = select("#load-copyright");
 	const textRotator = selectAll(".text-rotater");
 //	const bgRevealer = selectAll(".revealer");
+
+    const $path = select(".path");
+    const start = "M 0 100 V 50 Q 50 0 100 50 V 100 z";
+    const end =   "M 0 100 V 0 Q 50 0 100 0 V 100 z";
 
 	const skill1 = select("#skill-1");
 	const skill2 = select("#skill-2");
@@ -90,6 +94,11 @@ function loadingScreenReveal() {
 	tl.to(copyrightSplit.chars, { y: -34, stagger: 0.01 }, "<");
 //	tl.to(bgRevealer, { xPercent: 101, ease: Expo.easeInOut, stagger: 0.08 }, "<.3");
 	tl.to(loadingScreen, { display: "none", autoAlpha: 0 }, "<.5");
+
+    const tl_Transition = gsap.timeline();
+        tl_Transition.to($path, 0.8, {attr: { d: start }, ease: Power2.easeIn});
+        tl_Transition.to($path, 0.4, {attr: { d: end }, ease: Power2.easeOut});
+        tl_Transition.play(0);
 
 	return tl;
 }
