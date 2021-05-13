@@ -37,8 +37,8 @@ function transitionScreenReveal() {
     const end =   "M 0 100 V 0 Q 50 0 100 0 V 100 z";
     */
     const tl_Transition = gsap.timeline();
-        tl_Transition.to($path, 0.8, {attr: { d: start }, ease: Power2.easeIn});
-        tl_Transition.to($path, 0.4, {attr: { d: end }, ease: Power2.easeOut});
+		tl_Transition.to($path, 0.4, {attr: { d: end }, ease: Power2.easeOut});
+		tl_Transition.to($path, 0.8, {attr: { d: start }, ease: Power2.easeIn});
         tl_Transition.play(0);
     
     return tl_Transition;
