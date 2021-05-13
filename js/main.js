@@ -101,8 +101,10 @@ function heroReveal() {
 	const mainPage = select(".main-container");
 
 	gsap.set(mainPage, { autoAlpha: 1 });
-
+	/*
+	const tl = gsap.timeline({ defaults: { duration: 1.34, ease: "myEaseSmooth" } });
 	return tl;
+	*/
 }
 /*
 function heroReveal() {
