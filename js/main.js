@@ -13,7 +13,7 @@ function init() {
 // Master Timeline
 function masterHeroReveal() {
     const loader = loadingScreenReveal();
-  const opener = transitionScreenReveal();
+//  const opener = transitionScreenReveal();
 //	const hero = heroReveal();
 
 	const masterTl = gsap.timeline();
