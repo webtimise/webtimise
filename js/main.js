@@ -13,8 +13,8 @@ function init() {
 // Master Timeline
 function masterHeroReveal() {
     const loader = loadingScreenReveal();
-//  const opener = transitionScreenReveal();
-//	const hero = heroReveal();
+	const opener = transitionScreenReveal();
+	const hero = heroReveal();
 
 	const masterTl = gsap.timeline();
 
@@ -100,6 +100,14 @@ function loadingScreenReveal() {
 function heroReveal() {
 	const mainPage = select(".main-container");
 
+	gsap.set(mainPage, { autoAlpha: 1 });
+
+	return tl;
+}
+/*
+function heroReveal() {
+	const mainPage = select(".main-container");
+
 	const featuredImage = select("#featured-image");
 	const heroImage = select("#hero-image");
 	const heroImageAlt = select("#hero-image-replace");
@@ -157,7 +165,7 @@ function heroReveal() {
 
 	return tl;
 }
-
+*/
 // Projects Hover
 function projectCardHover() {
 	const projectCards = selectAll(".card-lists");
