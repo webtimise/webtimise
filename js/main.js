@@ -20,7 +20,7 @@ function masterHeroReveal() {
 
 	masterTl.add(loader);
 	masterTl.add(opener, "<5");
-//	masterTl.add(hero, "<6");
+	masterTl.add(hero, "<6");
 
 	return masterTl;
 }
